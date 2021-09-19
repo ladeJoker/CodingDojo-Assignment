@@ -1,0 +1,40 @@
+import java.lang.Exception
+
+fun main(){
+
+
+    var value1 = 3
+    print("Guess a number between 0 and 10: ")
+    try {
+        val entry = readLine()!!.toInt()
+        if(entry >=0 && entry<= 10) {
+            if (entry == value1) {
+                println("You got it!")
+            } else {
+                println("Ooops, wrong answer...")
+            }
+        }else{
+            println("You out of the range!")
+        }
+    }catch (e: Exception){
+        println("something went wrong")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
