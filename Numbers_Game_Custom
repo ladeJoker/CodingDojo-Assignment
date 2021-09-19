@@ -1,0 +1,27 @@
+import java.lang.Exception
+import kotlin.random.Random
+
+fun main() {
+val randomNum = Random.nextInt(0,11)
+    println("Please enter two numbers: ")
+    print("Frist num: ")
+    try {
+        val userNum1 = readLine()!!.toInt()
+        print("Second num: ")
+        val userNum2 = readLine()!!.toInt()
+
+        val result = randomNum * userNum1 - userNum2
+        println("X * $userNum1 - $userNum2 = $result")
+        print("-----------------------\nguess the secret number: ")
+        val guessAnswer = readLine()!!.toInt()
+        if(guessAnswer == randomNum){
+            println("Thats right :)")
+        }else{
+            println("Ooopse!! wrong answer")
+        }
+    }catch (e: Exception){
+        println("Something went wrong")
+    }
+
+
+}
