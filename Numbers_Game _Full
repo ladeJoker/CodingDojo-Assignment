@@ -1,0 +1,36 @@
+import java.lang.Exception
+import kotlin.random.Random
+
+fun main() {
+    var count: Int = 1
+    val option: String = "quit"
+    var value1 = Random.nextInt(0,11)
+    while (count <= 3) {
+        print("Guess a number between 0 and 10: ")
+        try {
+            val entry = readLine()!!
+            if (entry == option) {
+                println("---GOODBYE---")
+                break
+
+            } else if (entry!!.toInt() in 0..10) {
+
+                if (entry!!.toInt() == value1) {
+                    println("<<<<< You got it! >>>>>")
+                    count++
+                    if (count == 3) {
+                        println("You run out of chances...")
+                    }
+                } else {
+                    println("Ooops, wrong answer..try again!!")
+                }
+            } else {
+                println("You out of the range!..try again!!")
+            }
+        } catch (e: Exception) {
+            println("something went wrong")
+        }
+    }
+
+
+}
