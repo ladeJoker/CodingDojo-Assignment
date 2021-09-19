@@ -1,0 +1,16 @@
+fun main(){
+    //immutable val
+    // mutable var
+    print("Please enter your name: ")
+    val name = readLine()
+    println("Hello $name Have Nice Day With Coding Dojo!")
+
+    //------------------------------------Bonus
+    val msg: String = "Hello user, welcome to my program!"
+    print("Please Enter Your Name: ")
+    val userName = readLine().toString()
+    println(msg.replace("user",userName))
+
+
+
+}
