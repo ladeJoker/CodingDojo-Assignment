@@ -1,0 +1,20 @@
+import java.lang.Exception
+
+fun main(){
+
+    val MIN_AGE = 10
+    print("Enter your age: ")
+
+    try {
+        val age = readLine()!!.toInt()
+        if(age < MIN_AGE){
+            println("Not old enough ...")
+        }else{
+            println("Good, you are old enough.")
+        }
+    }catch (e: Exception){
+        println("something went wrong")
+    }
+
+    
+}
