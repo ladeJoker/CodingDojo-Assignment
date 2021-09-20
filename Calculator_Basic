@@ -1,0 +1,49 @@
+
+
+import java.lang.Exception
+import javax.print.attribute.IntegerSyntax
+import kotlin.random.Random
+
+fun main() {
+
+    fun checkInt(input: String): Int {
+        var numeric = true
+        try {
+            //Integer.parseInt(input)
+            input.toInt()
+        }catch (e: NumberFormatException){
+            numeric = false
+            println("Your entry will be convert to zero ~ ")
+        }
+        if(numeric) {
+            return input!!.toInt()
+        }
+        return 0
+    }
+
+    fun culcolateSum(num1: Int,num2: Int ): Int{
+        return num1 + num2
+    }
+
+    while (true) {
+        try {
+            print("Enter your first number: ")
+            val userInput1 = checkInt(readLine()!!)
+            print("Enter your first number: ")
+            val userInput2 = checkInt(readLine()!!)
+            val result = culcolateSum(userInput1, userInput2)
+            println("$userInput1 + $userInput2 = $result")
+            print("Whold you like to add more numbers? (y/n) >> ")
+            if (readLine().equals("y")) {
+                continue
+            } else {
+                println("Goodbye...")
+                break
+            }
+        } catch (e: Exception) {
+            println("Something went wrong")
+        }
+
+    }
+
+}
