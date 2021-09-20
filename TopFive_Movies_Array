@@ -1,0 +1,23 @@
+import java.lang.Exception
+import java.util.*
+import javax.print.attribute.IntegerSyntax
+import kotlin.random.Random
+
+fun main() {
+
+val myArray = arrayOf("","","","","")
+    println("Enter your top five movie!:")
+    try {
+        for (index in 0..4) {
+            myArray[index] = readLine()!!
+        }
+    }catch (e: Exception){
+        println("Something went wrong")
+    }
+
+        print("Your best movies is: "+ Arrays.toString(myArray))
+
+
+
+
+}
