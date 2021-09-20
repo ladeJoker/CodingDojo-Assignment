@@ -29,7 +29,7 @@ fun main() {
         try {
             print("Enter your first number: ")
             val userInput1 = checkInt(readLine()!!)
-            print("Enter your first number: ")
+            print("Enter your second number: ")
             val userInput2 = checkInt(readLine()!!)
             val result = culcolateSum(userInput1, userInput2)
             println("$userInput1 + $userInput2 = $result")
