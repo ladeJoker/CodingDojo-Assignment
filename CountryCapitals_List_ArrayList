@@ -1,0 +1,20 @@
+import kotlin.collections.ArrayList
+//arrayListOf() --> It is used to create a new ArrayList with provided elements.
+
+fun main() {
+    var index = 0
+    val countries = listOf<String>("Italy", "Saudi Arabia", "Paris")
+    val countriesCapital  = ArrayList<String>()
+    println("Enter the capital of the following countries...")
+    for (country in countries){
+        print("The capital of $country: ")
+        countriesCapital.add(readLine().toString())
+    }
+    for (country in countries){
+        println("${countriesCapital.get(countries.indexOf(country))} --> $country")
+    }
+
+
+
+
+}
