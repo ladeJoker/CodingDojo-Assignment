@@ -1,0 +1,24 @@
+import kotlin.collections.ArrayList
+
+fun main() {
+
+    var country = ""
+    var capital = ""
+    val countriesCapital = ArrayList<Any>()
+    var index = 0
+    println("Enter a capital & country ...")
+    for (count in 0..2){
+        print("Capital: ")
+        capital = readLine()!!
+        print("Country: ")
+        country = readLine()!!
+        countriesCapital.add(ArrayList(arrayListOf(capital,country)))
+    }
+    for (out in countriesCapital){
+        println(out)
+    }
+
+
+
+
+}
