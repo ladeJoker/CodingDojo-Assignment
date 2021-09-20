@@ -1,0 +1,30 @@
+//immutable variables declared by --> val
+
+// mutable variables declared by --> var
+
+//printing to user --> print() for one line, println() print a statement & \n
+
+//get input from user --> readLine() & the input can be customized such as readLine().toString
+
+/*variables can be print to user by
+    1) directly --> print(variable)
+    2) indirectly --> print("$variable hello world") using the dolar sign */
+
+//assigning data type to the variables --> var nameVariable: String
+
+//String have different library inside once we press dot after such as --> msg.replace(,)
+
+/*use try{}..catch(e: Exception){} to let the program work softly without to be crush, we use it usually with
+unexpected entries such as from the users.
+ */
+
+//condition make by --> if...else if..else, important note! i have to pay attention to the arrangement such as start by int or str?
+
+//for repeated pattern or list select ---> for, while loop
+
+//lowerLayers values can be cast as an implicit but higherLayer variables is explicit so we have do it manually
+
+//if i have a list that user should pick from use --> when(){... else -> } as it is the synonymous to the switch in java
+
+
+
