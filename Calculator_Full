@@ -1,0 +1,99 @@
+
+
+import java.lang.Exception
+import javax.print.attribute.IntegerSyntax
+import kotlin.random.Random
+
+fun main() {
+
+    fun checkInt(input: String): Int {
+        var numeric = true
+        try {
+            //Integer.parseInt(input)
+            input.toInt()
+        }catch (e: NumberFormatException){
+            numeric = false
+            println("Your entry will be converted to zero ~ ")
+        }
+        if(numeric) {
+            return input!!.toInt()
+        }
+        return 0
+    }
+
+    fun calculator(num1: Int,num2: Int, op: Char): Int{
+
+        when(op){
+            '*' -> {
+                return num1 * num2
+            }
+            '/' -> {
+                return num1 / num2
+            }
+            '+' -> {
+                return num1 + num2
+            }
+            '-' -> {
+                return num1 - num2
+            }
+            else -> {
+                return 0
+            }
+        }
+    }
+
+    fun checkOp(input: Char): Int{
+        var numeric = true
+        when(input){
+            '*' -> {}
+            '-' -> {}
+            '+' -> {}
+            '/' -> {}
+            else -> {
+                numeric = false
+            }
+        }
+        if(numeric == true){
+            return 1
+        }
+        return 0
+    }
+
+    while (true) {
+        try {
+            print("Enter your first number: ")
+            var userInput1 = checkInt(readLine()!!)
+            print("Enter an operator: ")
+            var userOperator = readLine()!!
+            if(checkOp(userOperator[0]) == 0){
+                while(true) {
+                    print("This operator doesn't exist! Try something Else or Restart? (E/R) >> ")
+                    var choice = readLine()!!
+                    if (choice[0].toLowerCase().equals('e')) {
+                        print("Enter an operator: ")
+                        userOperator = readLine()!!
+                    } else {
+                        continue
+                    }
+                }
+            }
+            println("$userInput1 $userOperator")
+            print("Enter your second number: ")
+            val userInput2 = checkInt(readLine()!!)
+            val result = calculator(userInput1, userInput2 , userOperator[0])
+            println("$userInput1 $userOperator $userInput2 = $result")
+            print("Whold you like to add more numbers? (y/n) >> ")
+            var choice2  = readLine()!!
+            if (choice2[0].toLowerCase().equals('y')) {
+                continue
+            } else {
+                println("Goodbye...")
+                break
+            }
+        } catch (e: Exception) {
+            println("Something went wrong")
+        }
+
+    }
+
+}
