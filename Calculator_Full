@@ -66,7 +66,7 @@ fun main() {
             print("Enter an operator: ")
             var userOperator = readLine()!!
             if(checkOp(userOperator[0]) == 0){
-                while(true) {
+                
                     print("This operator doesn't exist! Try something Else or Restart? (E/R) >> ")
                     var choice = readLine()!!
                     if (choice[0].toLowerCase().equals('e')) {
@@ -75,7 +75,7 @@ fun main() {
                     } else {
                         continue
                     }
-                }
+                
             }
             println("$userInput1 $userOperator")
             print("Enter your second number: ")
