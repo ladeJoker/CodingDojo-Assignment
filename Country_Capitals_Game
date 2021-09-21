@@ -1,0 +1,30 @@
+import kotlin.random.Random
+
+fun main() {
+    class Country(val name: String, val capital: String) {
+        fun printContent() {
+            println("$name --> $capital")
+        }
+        fun checkEntry(input: String) {
+            if (input!!.toLowerCase().trim() == capital!!.toLowerCase()) {
+                println("<<< Correct >>>")
+            } else {
+                println("WRONG!: The correct answer is >> \"${name} -> ${capital}\"")
+            }
+        }
+    }
+    //#######################################################################################
+    val countries = listOf<String>("Paris" , "Saudi Arabia" , "Italy" , "Yamen" , "KUS" , "parazail" , "Turkia" , "cheak" , "Almania" , "Swesra")
+    val capitals = listOf<String>("France" , "Riyadh" , "Roma" , "Sanaa" , "London" , "Parazelia" , "Anghara" , "Brag" , "Berlain" , "Jenave")
+    val listOfObjects = ArrayList<Country>()
+    for (i in 0..2){
+        listOfObjects.add(Country(countries[i],capitals[i]))
+    }
+    //#######################################################################################
+    println("What is the capital of the following countries? ")
+    while(true){
+        val objectCountry = listOfObjects.get(Random.nextInt(listOfObjects.size))
+        print("${objectCountry.name}: ")
+        objectCountry.checkEntry(readLine()!!)
+    }
+}
