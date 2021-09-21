@@ -1,0 +1,15 @@
+import kotlin.collections.ArrayList
+
+fun main() {
+
+    val myDic = mutableMapOf<Int,String>()
+    val listy = listOf<String>("Sunday" , "Monday",  "Tuesday", "Wednesday" , "Thursday", "Friday" , "Saturday"    )
+    for(i in 1..7){
+        myDic[i] = listy[i-1]
+        println("Day: $i --> ${myDic[i]}")
+    }
+
+
+
+
+}
