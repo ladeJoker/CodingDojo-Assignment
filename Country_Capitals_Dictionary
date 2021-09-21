@@ -1,0 +1,20 @@
+
+fun main() {
+
+    var country = ""
+    var capital = ""
+    val myDic = mutableMapOf<String,Any>()
+    for(i in 1..3){
+        print("Enter a country: ")
+        country = readLine()!!
+        print("Enter a Capital: ")
+        capital = readLine()!!
+        myDic[country] = capital
+
+    }
+    println("$myDic")
+
+
+
+
+}
