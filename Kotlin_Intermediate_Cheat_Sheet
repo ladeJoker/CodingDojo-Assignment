@@ -1,0 +1,51 @@
+//functions can have a return type --> fun nameFun(input: String): String{}
+
+//if i want to check about the user entry type --> use try..catch && input.toType
+
+/*to check whether an option exist in a limited list --> use when such that:
+when(input){
+            '*' -> {}
+            '-' -> {}
+            '+' -> {}
+            '/' -> {}
+            else -> {
+                numeric = false
+            }
+}
+ */
+
+//when get the input from user & the type of entry didnt specified from the beganning --> use ReadLine()!!
+
+/*i can specify a variable from the beganning is a char or
+ when i get the input made it as input[0] to get the first index and consider it as char.
+ */
+
+/*
+the difference between array and arraylist is that,
+array is mutable, i can change items inside it
+the List is immutable, i cant change anything on it!
+both of it have fixed size which mean that they are not dynamic &, can have only one type at time
+ */
+
+/*
+on the other hand, ArrayList or arrayListOf are mutable, have dynamic size,
+can hold values and objects, can have either a specific dataType or all the type at time
+ */
+
+/*
+we can create a nested array list to be as 2D dimention & 3D dimention as i want
+such as:
+-ArrayList<ArrayList<String>>()
+-arrayListOf<ArrayList<String>>()
+ArrayList<arrayListOf<String>>() --> works only if i add the elements at the entry time such like:
+val countriesCapital = ArrayList<Any>()
+countriesCapital.add(arrayListOf(capital,country))
+ */
+
+/*
+at the printing, when the $ sign doesnt hold all the variable --> use the {} such as:
+print("${array[0].remove}")
+ */
+
+
+
