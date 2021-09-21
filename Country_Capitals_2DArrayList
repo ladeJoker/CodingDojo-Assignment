@@ -12,7 +12,7 @@ fun main() {
         capital = readLine()!!
         print("Country: ")
         country = readLine()!!
-        countriesCapital.add(ArrayList(arrayListOf(capital,country)))
+        countriesCapital.add(arrayListOf(capital,country))
     }
     for (out in countriesCapital){
         println(out)
