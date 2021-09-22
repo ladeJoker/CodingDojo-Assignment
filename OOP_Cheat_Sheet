@@ -1,0 +1,32 @@
+/*
+creating dictionary help us in binding between a key and a value
+by defoalt it is immutable, its values once generated cant be modified:
+MapOf<Int,String>()
+Also it can be mutable such as:
+mutableMapOf<Int,String>()
+note!: we can reach the key list through
+val keys = myDic.keys
+ */
+
+/*ArrayList is the base & arrayListOf is a special function that can create an narray
+whatever, we cant do it as this:
+ex: arrayListOF<arrayListOF<String>>()
+ */
+
+/*
+1)abstract class should have an abstract variables/functions
+ex: abstract class Animal {}
+The functions doesnt have a body, only the declaration line, then later in the instance i can build the body
+ex: abstract fun talk(): String
+2)the instance of the abstract calss should be such:
+ex: class Dog(...) : Animal() {}
+ */
+
+/*
+the classes represent real world entities as an objects, we can handle these objects via
+using ArrayList by fill it by objects:
+ex declaration: val dogsAge = arrayListOf<Dog>()
+in the example, the type specified as the name of the class will be fill in.
+go through the list by iteration on and retrieve the functions and variables
+ */
+
