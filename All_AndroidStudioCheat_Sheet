@@ -1,0 +1,108 @@
+//immutable variables declared by --> val
+
+// mutable variables declared by --> var
+
+//printing to user --> print() for one line, println() print a statement & \n
+
+//get input from user --> readLine() & the input can be customized such as readLine().toString
+
+/*variables can be print to user by
+    1) directly --> print(variable)
+    2) indirectly --> print("$variable hello world") using the dolar sign */
+
+//assigning data type to the variables --> var nameVariable: String
+
+//String have different library inside once we press dot after such as --> msg.replace(,)
+
+/*use try{}..catch(e: Exception){} to let the program work softly without to be crush, we use it usually with
+unexpected entries such as from the users.
+ */
+
+//condition make by --> if...else if..else, important note! i have to pay attention to the arrangement such as start by int or str?
+
+//for repeated pattern or list select ---> for, while loop
+
+//lowerLayers values can be cast as an implicit but higherLayer variables is explicit so we have do it manually
+
+//if i have a list that user should pick from use --> when(){... else -> } as it is the synonymous to the switch in java
+
+//functions can have a return type --> fun nameFun(input: String): String{}
+
+//if i want to check about the user entry type --> use try..catch && input.toType
+
+/*to check whether an option exist in a limited list --> use when such that:
+when(input){
+            '*' -> {}
+            '-' -> {}
+            '+' -> {}
+            '/' -> {}
+            else -> {
+                numeric = false
+            }
+}
+ */
+
+//when get the input from user & the type of entry didnt specified from the beganning --> use ReadLine()!!
+
+/*i can specify a variable from the beganning is a char or
+ when i get the input made it as input[0] to get the first index and consider it as char.
+ */
+
+/*
+the difference between array and arraylist is that,
+array is mutable, i can change items inside it
+the List is immutable, i cant change anything on it!
+both of it have fixed size which mean that they are not dynamic &, can have only one type at time
+ */
+
+/*
+on the other hand, ArrayList or arrayListOf are mutable, have dynamic size,
+can hold values and objects, can have either a specific dataType or all the type at time
+ */
+
+/*
+we can create a nested array list to be as 2D dimention & 3D dimention as i want
+such as:
+-ArrayList<ArrayList<String>>()
+-arrayListOf<ArrayList<String>>()
+ArrayList<arrayListOf<String>>() --> works only if i add the elements at the entry time such like:
+val countriesCapital = ArrayList<Any>()
+countriesCapital.add(arrayListOf(capital,country))
+ */
+
+/*
+at the printing, when the $ sign doesnt hold all the variable --> use the {} such as:
+print("${array[0].remove}")
+ */
+
+ /*
+creating dictionary help us in binding between a key and a value
+by defoalt it is immutable, its values once generated cant be modified:
+MapOf<Int,String>()
+Also it can be mutable such as:
+mutableMapOf<Int,String>()
+note!: we can reach the key list through
+val keys = myDic.keys
+ */
+
+/*ArrayList is the base & arrayListOf is a special function that can create an narray
+whatever, we cant do it as this:
+ex: arrayListOF<arrayListOF<String>>()
+ */
+
+/*
+1)abstract class should have an abstract variables/functions
+ex: abstract class Animal {}
+The functions doesnt have a body, only the declaration line, then later in the instance i can build the body
+ex: abstract fun talk(): String
+2)the instance of the abstract calss should be such:
+ex: class Dog(...) : Animal() {}
+ */
+
+/*
+the classes represent real world entities as an objects, we can handle these objects via
+using ArrayList by fill it by objects:
+ex declaration: val dogsAge = arrayListOf<Dog>()
+in the example, the type specified as the name of the class will be fill in.
+go through the list by iteration on and retrieve the functions and variables
+ */
