@@ -19,6 +19,9 @@ adding links to the gradle for the recycler view or the String file for reservin
 //there is different concept:
 
 /*using (getSharedPreferences) to reserve data eve if the app closed, i can use this piece of code:
+// 1) paste this in the string.xml file:::
+<string name="preference_file_key">com.example.helloworld.PREFERENCE_FILE_KEY</string>
+// 2) oncreate fun:::
 private lateinit var sharedPreferences: SharedPreferences //to keep track of the higher score
 sharedPreferences = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
 
