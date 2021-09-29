@@ -1,0 +1,76 @@
+/* explaining the logic of kotlin with android studio can be easly gain, we need only to follow
+ a steps and the program will be easy to understand and build
+ */
+
+// 1) drew a good understanding of the project requirement: variables, loops, recycler view ...
+
+// 2) design the front-end and name the component with suitable names
+
+// 3) declare all needed variables, if they are global then declare it in the OnCreate fun
+
+/* 4) check if there is a files need to be added or modified such as: adding colors,
+adding links to the gradle for the recycler view or the String file for reserving data method
+ */
+
+// 5) now we can build the app softly with android studio, starting coding on the OnCreat fun then...
+
+//----------------------------------------------------------------------------------------------------------------------
+
+//there is different concept:
+
+/*using (getSharedPreferences) to reserve data eve if the app closed, i can use this piece of code:
+private lateinit var sharedPreferences: SharedPreferences //to keep track of the higher score
+sharedPreferences = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+    fun callData(){
+        highestScore = sharedPreferences.getInt("HQ",0)!!
+    }
+        fun saveData(){
+        with(sharedPreferences.edit()) {
+            putInt("HQ",highestScore)
+            apply()
+        }
+    }
+ */
+
+/* the recycler view, it helps to display a long list that we can scroll on, to build it we have to:
+// 1) paste this link and sync in the gradle in the plugin area:::
+id 'kotlin-android-extensions'
+
+//2) create a kotlin class named by RecyclerViewAdapter under the MainActivity class and fill it,
+then make an array list to send data from MainActivity class to the RecyclerViewAdapter class,
+then call it in the MainActivity class by this piece of code::::
+    lateinit var myRV: RecyclerView
+    lateinit var allUserEntry: ArrayList<String>
+    fun toRecyclerView(entry: String) { //a string to display it to the user in the recycler view
+        allUserEntry.add(entry) //Array list to store input
+        myRV.adapter =
+            RecyclerViewAdapter(allUserEntry) //as the parameter accept only an array list
+        myRV.layoutManager = LinearLayoutManager(this)
+        if(allUserEntry.size!=0)
+            myRV.smoothScrollToPosition(allUserEntry.size - 1)
+    }
+ */
+
+/* the Snackbar, it used to display an alert to the user, its good to guide the user if there is a mistake!,
+we can applay it as:::
+// 1) write an id in the activity_main_xml in the "constraintlayout" area
+// 2) import com.google.android.material.snackbar.Snackbar
+Snackbar.make(appAlert, "Enter Correct Letter", Snackbar.LENGTH_LONG).show()
+ */
+
+/* the Dialog box, helps to give the user an option or to let the user to enter some information,
+we can use this piece of code as example:::
+ fun playAgain(sentence: String){
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setMessage("The Correct Phrase was $sentence \nWould You Like To Play Again:")
+            .setCancelable(false)
+            .setPositiveButton("Yes") { _, _ -> this.recreate() }
+        .setNegativeButton("No"){dialog,_ -> dialog.cancel() }
+        val alert=dialogBuilder.create()
+        alert.setTitle("Game Over!!")
+        alert.show()
+    }
+ */
+
+// the recreate method, helps in reStart the app
